@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+</head>
+<body>
+  <div id="app">
+    <button id="toggleMode">Alternar para Lembrete</button>
+
+    <hr>
+
+    <form id="taskForm">
+      <!-- To-Do Section -->
+      <fieldset id="todoSet">
+        <legend>To-Do:</legend>
+        <label for="todoDescription">Descrição:</label>
+        <input type="text" id="todoDescription" name="todoDescription" required />
+        <button type="submit">Adicionar To-Do</button>
+      </fieldset>
+
+      <!-- Reminder Section -->
+      <fieldset id="reminderSet" style="display: none;">
+        <legend>Lembrete:</legend>
+        <label for="reminderDescription">Descrição:</label>
+        <input type="text" id="reminderDescription" name="reminderDescription" required />
+
+        <label for="scheduleDate">Data:</label>
+        <input type="date" id="scheduleDate" name="scheduleDate" required />
+
+        <button type="submit">Adicionar Lembrete</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <script src="./dist/index.js"></script>
+</body>
+</html>
