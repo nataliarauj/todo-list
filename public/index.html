@@ -7,31 +7,37 @@
 </head>
 <body>
   <div id="app">
-    <button id="toggleMode">Alternar para Lembrete</button>
-
-    <hr>
-
+    <button id="toggleMode">Alternar Modo</button>
+    <hr/>
     <form id="taskForm">
       <!-- To-Do Section -->
       <fieldset id="todoSet">
         <legend>To-Do:</legend>
         <label for="todoDescription">Descrição:</label>
-        <input type="text" id="todoDescription" name="todoDescription" required />
+        <input type="text" name="todoDescription" required />
         <button type="submit">Adicionar To-Do</button>
       </fieldset>
 
       <!-- Reminder Section -->
-      <fieldset id="reminderSet" style="display: none;">
+      <fieldset id="reminderSet" style="display: none">
         <legend>Lembrete:</legend>
         <label for="reminderDescription">Descrição:</label>
         <input type="text" id="reminderDescription" name="reminderDescription" required />
 
         <label for="scheduleDate">Data:</label>
-        <input type="date" id="scheduleDate" name="scheduleDate" required />
+        <input type="date" id="reminderDate" name="reminderDate" required />
 
-        <button type="submit">Adicionar Lembrete</button>
-      </fieldset>
+        <label for="notifications">Notificado por:</label>
+        <select name="notifications">
+            <option value="SMS">SMS</option>
+            <option value="EMAIL">E-mail</option>
+            <option value="PUSH">Push Notification</option>
+        </select>
+        <button type="submit">Submit</button>
+    </fieldset>
     </form>
+    <br/>
+    <ul id="taskList" style="white-space: pre-line; list-style: none;"></ul>
   </div>
 
   <script src="./dist/index.js"></script>
